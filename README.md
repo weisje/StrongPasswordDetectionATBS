@@ -1,2 +1,2 @@
 # StrongPasswordDetectionATBS
-Uses regex to check that a password string it is passwed is strong
+Uses regex to check that a password string it is passed is strong
