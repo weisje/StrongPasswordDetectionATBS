@@ -8,12 +8,24 @@ def passwordStrengthDetector(stringToTest) -> bool:
     :type stringToTest: str
     :return: bool
     """
-    pass
+    digitCheck = re.compile(r"^.*?\d.*?")
+    upperCaseCheck = re.compile(r"^.*?[A-Z].*?")
+    lowerCaseCheck = re.compile(r"^.*?[a-z].*?")
+    if len(stringToTest) < 8:
+        return False
+    if not digitCheck.search(stringToTest):
+        return False
+    if not upperCaseCheck.search(stringToTest):
+        return False
+    if not lowerCaseCheck.search(stringToTest):
+        return False
+
+    return True
 
 
 def main():
-    pass
-
+    password = "Apples12"
+    print(passwordStrengthDetector(password))
 
 if __name__ == '__main__':
     main()
